@@ -6,7 +6,7 @@ public class HandScan {
         Scanner input = new Scanner(System.in);
         int[] intHand = new int[5];
         String[] signs = new String[5];
-        System.out.println("");
+        System.out.println(" ");
         System.out.println("[Welcome to HandScan]");
         System.out.println("Please input your cards in the following format:\n[value(1-10 & j / q / k) color(r / b) sign(s / h / c / d)] (ex: 4 r d)");
 
@@ -36,7 +36,7 @@ public class HandScan {
         System.out.println("--------------------");
 
         Arrays.sort(intHand);
-        System.out.println("");
+        System.out.println(" ");
 
         // check
         if (royalFlush(intHand, signs)) {
@@ -94,17 +94,9 @@ public class HandScan {
     private static boolean fullHouse(int[] hand) {
         if (hand[0] == hand[1]) {
             if (!(hand[1] == hand[2])) {
-                if (hand[2] == hand[3] && hand[3] == hand[4]) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return hand[2] == hand[3] && hand[3] == hand[4];
             } else {
-                if (hand[3] == hand[4]) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return hand[3] == hand[4];
             }
         } else {
             return false;
@@ -169,7 +161,7 @@ public class HandScan {
         }
         return max;
     }
-
+    /*
     private static int[] handToInt(char[] hand) {
         int[] newHand = new int[hand.length];
         for (int card = 0; card < hand.length; card++) {
@@ -181,7 +173,7 @@ public class HandScan {
         }
         return newHand;
     }
-
+    */
     private static int faceToInt(char face) {
         switch(face) {
             case 'x': return 10;
