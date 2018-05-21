@@ -1,4 +1,13 @@
 
+/*
+
+[Falcon Hacks] 5/20/2018
+Collaboration of Jiahua (Will) Liang and Brian Lee
+
+1st Prize
+
+ */
+
 import java.util.*;
 
 public class HandScan {
